@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz da Yasmin </title>
+
+    <style>
+        body{
+            background-color: pink ;
+
+        }
+
+        .painel{
+            background-color: white;
+            margin: auto;
+            width: 500px;
+            height: 600px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+        #sim{
+            height: 60px;
+            width: 80px;
+            background-color: pink;
+            border: 2px solid black;
+            border-radius: 10px;
+            color: black;
+            margin-left: -110px;
+            
+
+
+        }
+        #nao{
+            position: absolute;
+            height: 60px;
+            width: 80px;
+            background-color: pink;
+            border: 2px solid black;
+            border-radius: 10px;
+            color: black;
+            margin-left: 30px;
+
+        }
+
+        .minha-imagem{
+            width: 500px;
+        }
+
+
+       
+    </style>
+
+</head>
+<body>
+
+    <div class="painel">
+        <h1> Yasmin - a melhor irmã do mundo!</h1>
+
+        <img src="./Yasmin-Linda-.gif" alt="descrever imagem" class="minha-imagem">
+
+        <h2>A Yasmin é ou não é a melhor irmã, mãe, esposa e a mais linda de todas?</h2>
+
+        <button id="sim" onclick="parabens()"> Sim! </button>
+        <button onmouseover="fuja()" id="nao"> Não! </button>
+
+    </div>
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+
+        }
+
+        function parabens(){
+            alert("Parabéns, você é um irmão/cara/filho de sorte por ter a Yasmin como mãe/esposa")
+        }
+    </script>
+    
+</body>
+</html>
